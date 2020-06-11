@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Feel Goods</title>
+
+  <!-- Materialize Min for CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Materialize comp min for JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- materialize Icon CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- CSS Stylesheet Link-->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!--NAVBAR-->
+  <nav>
+    <div class="nav-wrapper teal">
+      <a href="" class="brand-logo"><i class="material-icons"></i>The Feel Goods</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href=""><i class="material-icons">option1</i>Notes</a></li>
+        <li><a href=""><i class="material-icons">option2</i>Workout</a></li>
+        <li><a href=""><i class="material-icons">option3</i>Resources</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div class="container">
+
+    <div class="row">
+      <h1 class="col s12 m12 center-align">The Feel Goods</h1>
+
+      <!--Card for Inspirational Quote-->
+      <h2 class="col s12 m6 center-align card medium" >
+          Quote
+        <div id="quote">
+          <h3 class="" id=""></h3>
+      </h2>
+
+      <!--Card for Notes/Todo section-->
+      <h2 class="col s12 m6 center-align card medium">
+        Notes/Todo:
+        <div id="notes">
+          <p class="">
+          </p>
+        </div>
+      
+      <!--Card for Health and Wellness Tips-->
+      <h2 class="col s12 m6 center-align card medium" >
+          Health and Wellness Tips:
+        <div class="row">
+          <div id="health"></div>
+          <p>Tip</p>
+
+        </div>
+
+        <!--Box for Workout of the Day -->
+        <h2 class="col s12 m6 valign-wrapper center-align gif">
+          Workout of the day!
+          <img id="workout" src="" alt="">
+        </h2>
+      </h2>
+
+      <!-- Card for Workout of the day Weekly List--> -->
+      <h2 class="col s12 m12 center-align" >
+        <br>Workouts for the Week!
+        <div class="card medium">
+          <div class="card-content">
+            <p id="workoutList"></p>
+          </div>
+      </h2>
+
+      <!--Card for Resources-->
+      <h2 class="col s12 m6 center-align card medium" >
+        ReSoUrCeS:
+        <div class="col-sm-">
+          <p></p>
+        </div>
+      </h2>
+
+
+    </div>
+  </div>
+
+  <!--SCRIPT LINKS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+  
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+      
+    <script src="script.js"></script>
+</body>
+
+</html>
