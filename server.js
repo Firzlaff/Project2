@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-
-=======
 const express = require("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -19,4 +16,3 @@ app.use(router);
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
->>>>>>> 74ef7a3bf1a8a8965456ac2072955947b0651d81
