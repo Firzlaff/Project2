@@ -1,3 +1,3 @@
-INSERT INTO notes (note) VALUES
-    ("test1"),
-    ("test2");
+INSERT INTO notes (note, complete) VALUES
+    ("test1", 0),
+    ("test2", 0);
