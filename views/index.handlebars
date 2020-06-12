@@ -1,9 +1,3 @@
-{{#each project2}}
-<p>{{id}}</p>
-<p>{{note}}</p>
-<p>{{complete}}</p>
-{{/each}}
-
 <!--NAVBAR-->
 <nav>
     <div class="nav-wrapper teal">
@@ -36,10 +30,21 @@
                     <textarea id="textarea1" class="materialize-textarea"></textarea>
                     <a class="waves-effect waves-light btn-small">Add</a>
                 </div>
-                <div class="list">
-                    <span class="flow-text">test</span>
-                    <a class="waves-effect waves-light btn-small">Complete</a>
+                {{#each project2}}
+                {{#if complete}}
+                <div>
+                    <span class="flow-text" style="text-decoration: line-through">{{note}}</span>
+                    <a class="waves-effect waves-light btn-small delete-note" note-id="{{id}}"
+                        note-complete="{{complete}}">Delete</a>
                 </div>
+                {{else}}
+                <div>
+                    <span class="flow-text">{{note}}</span>
+                    <a class="waves-effect waves-light btn-small complete-note" note-id="{{id}}"
+                        note-complete="{{complete}}">Complete</a>
+                </div>
+                {{/if}}
+                {{/each}}
             </div>
 
             <!--Card for Health and Wellness Tips-->
