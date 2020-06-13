@@ -1,13 +1,18 @@
 const express = require("express");
 const router = express.Router();
-const project2 = require("../models/project2");
+const sql = require("../models/sql");
 
 router.get("/", async function (req, res) {
     let data;
-    await project2.selectAll().then(function (res) {
+    await sql.selectAll().then(function (res) {
         data = res;
     });
-    res.render("index", { project2: data });
+    res.render("index", { sql: data });
 });
+
+router.post("/api/add", (req, res) => {
+    sql.addTodo(req.body.addTodo);
+    res.sendStatus(200).end();
+})
 
 module.exports = router;
