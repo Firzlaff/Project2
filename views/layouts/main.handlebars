@@ -1,23 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Materialize Min for CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <!-- Materialize comp min for JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!-- materialize Icon CDN -->
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.js"
-        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script src="../../js/todo.js"></script>
-    <title>Project2</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Feel Goods</title>
+  <!-- Materialize Min for CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <!-- Materialize comp min for JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <!-- materialize Icon CDN -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- CSS Stylesheet Link-->    
+  <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    {{{body}}}
+  <!--NAVBAR-->
+  <nav>
+    <div class="nav-wrapper teal">
+      <a href="" class="brand-logo"><i class="material-icons"></i>The Feel Goods</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#notes-header"><i class="material-icons white header-right">option1</i>Notes</a></li>
+        <li><a href="#workouts-header"><i class="material-icons white header-right">option2</i>Workout</a></li>
+        <li><a href="#resources-header"><i class="material-icons white header-right">option3</i>Resources</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="container parallax">
+    <div class="row">
+      <h1 class="col s12 m12 center-align z-depth-5">The Feel Goods</h1>
+     
+      <!--Card for Inspirational Quote-->
+      <h2 class="col s12 m6 center-align card medium z-depth-5" >
+          Quote 
+        <div id="quote">
+          <h3 class="z-depth-5" id=""></h3>
+      </h2>
+      <!--Card for Notes/Todo section-->
+      <h2 class="col s12 m6 center-align medium z-depth-5">
+        Notes/Todo:
+        <div id="notes">
+          <p class="z-depth-5">
+          </p>
+        </div>
+      <!--Card for Health and Wellness Tips-->
+      <h2 id= "notes-header" class="col s12 m6 center-align card medium z-depth-5" >
+          Health and Wellness Tips:
+        <div class="row z-depth-5">
+          <div id="health"></div>
+          <p>Tip</p>
+        </div>
+        <!--Box for Workout of the Day -->
+        <h2 class="col s12 m6 valign-wrapper center-align gif z-depth-5">
+          Workout of the day!
+          <img id="workout" src="" alt="">
+        </h2>
+      </h2>
+      <!-- Card for Workout of the day Weekly List--> -->
+      <h2 id= "workouts-header" class="col s12 m12 center-align z-depth-5" >
+        <br>Workouts for the Week!
+        <div class="card medium z-depth-5">
+          <div class="card-content z-depth-5">
+            <p id="workoutList"></p>
+          </div>
+      </h2>
+      <!--Card for Resources-->
+      <h2 id= "resources-header" class="col s12 m6 center-align medium z-depth-5" >
+        ReSoUrCeS:
+        <div class="col-sm- z-depth-5">
+          <h5><a href="https://www.adoctoraday.com/"><em>Doctor a Day</em></a></h5>
+          <h5><a href="https://mindfulnesscenter.utah.edu/"><em>Free anxiety and depression workshop</em></a></h5>
+          <h5 class="text-#eceff1 blue-grey lighten-5"><a href="https://namiut.org/"> <em>National Alliance on Mental Illness</em></a></h5>
+        </div>
+      </h2>
+    </div>
+  </div>
+  <!--SCRIPT LINKS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.min.js"
+      integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+      crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
-
 </html>
