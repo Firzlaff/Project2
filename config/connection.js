@@ -8,7 +8,7 @@ const mysql = require("mysql");
 //     database: "project2_db"
 // });
 
-//connects to the deployed Heroku DB 
+// connects to the deployed Heroku DB 
 const connection = mysql.createConnection({
    host:"qbct6vwi8q648mrn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",	
    user: "oaw9hcazqkwi0fd7",	

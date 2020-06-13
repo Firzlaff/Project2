@@ -43,9 +43,9 @@ const project2 = {
         });
     },
     // Funciton to select all health and wellness tips from the Heroku DB 
-    selectAllTips: function () {
+    selectOneTip: function () {
         return new Promise(function (resolve, reject) {
-            const queryString = "SELECT * FROM Tips;";
+            const queryString = "SELECT * FROM tips ORDER BY RAND() LIMIT 1;";
             connection.query(queryString, function (err, data) {
                 if (err) throw err;
                 resolve(data);

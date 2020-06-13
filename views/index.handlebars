@@ -30,7 +30,7 @@
                     <textarea id="addTodoInput" class="materialize-textarea"></textarea>
                     <a class="waves-effect waves-light btn-small" id="addTodo">Add</a>
                 </div>
-                {{#each sql}}
+                {{#each todo}}
                 {{#if complete}}
                 <div>
                     <span class="flow-text" style="text-decoration: line-through">{{note}}</span>
@@ -48,11 +48,12 @@
             <!--Card for Health and Wellness Tips-->
             <h2 class="col s12 m6 center-align card medium">
                 Health and Wellness Tips:
-                <div class="row">
-                    <div id="health"></div>
-                    <p>Tip</p>
-
-                </div>
+                <br>
+                {{#each tip}}
+                <span class="flow-text"><b>{{name}}</b></span>
+                <br>
+                <span class="flow-text">{{tip}}</span>
+                {{/each}}
 
                 <!--Box for Workout of the Day -->
                 <h2 class="col s12 m6 valign-wrapper center-align gif">
@@ -61,14 +62,29 @@
                 </h2>
             </h2>
 
-            <!-- Card for Workout of the day Weekly List--> -->
-            <h2 class="col s12 m12 center-align">
-                <br>Workouts for the Week!
+            {{!-- <div class="col s12 m6 center-align card medium">
+                <h2>Health and Wellness Tip:</h2>
                 <div class="card medium">
                     <div class="card-content">
-                        <p id="workoutList"></p>
+                        <span class="flow-text"><b>{{tip.name}}</b></span>
+                        <span class="flow-text">{{tip.tip}}</span>
                     </div>
-            </h2>
+                </div>
+            </div> --}}
+
+            <!-- Card for Workout of the day Weekly List--> -->
+            <div class="col s12 m12 center-align">
+                <h2>Workouts for the Week!</h2>
+                <div class="card medium">
+                    <div class="card-content">
+                        {{#each workout}}
+                        <span class="flow-text"><b>{{day}}</b></span>
+                        <span class="flow-text">{{workout}}</span>
+                        <br>
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
 
             <!--Card for Resources-->
             <h2 class="col s12 m6 center-align card medium">
