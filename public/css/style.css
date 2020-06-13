@@ -1,4 +1,14 @@
-p {color: red;
-   background-color: blue;
+html {
+   scroll-behavior: smooth;
+ }
+body {
+
+   background-image: url("zen.jpg");
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-size: 100vw 100vh;
 }
- 
+
+.card {opacity: 0;}
+/* .col {opacity:0} */
+
