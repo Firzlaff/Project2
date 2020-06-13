@@ -12,7 +12,11 @@ router.get("/", async function (req, res) {
     await sql.selectAllWorkouts().then(function (res) {
         allWorkouts = res;
     });
-    res.render("index", { todo: todoData, workout: allWorkouts });
+    let oneTip;
+    await sql.selectOneTip().then(function (res) {
+        oneTip = res;
+    });
+    res.render("index", { todo: todoData, workout: allWorkouts, tip: oneTip });
 });
 // Post Route
 router.post("/api/add", (req, res) => {

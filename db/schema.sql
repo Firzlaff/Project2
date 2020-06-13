@@ -12,8 +12,6 @@ CREATE TABLE notes (
     PRIMARY KEY (id)
 );
 
-
-
 USE dfbs7vcu2m1nh29q;
 -- Creating the table for the workout section
 CREATE TABLE workouts (
