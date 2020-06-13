@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 -- Notes Test Seeds
 INSERT INTO notes (note) VALUES
     ("test1"),
@@ -43,3 +44,8 @@ VALUES ("Take a break", "Take a break from news and media, when feeling overwhel
                     by moving your body in a way that feels good, will alleviate the physical effects of anxiety on your body.
                     Extra endorphins and oxygen will help to keep your muscles working and you feeling good.");
 
+=======
+INSERT INTO notes (note, complete) VALUES
+    ("test1", 0),
+    ("test2", 0);
+>>>>>>> eaae0e210805f638b74dd5f69eacc191f714304a

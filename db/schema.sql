@@ -8,6 +8,7 @@ USE dfbs7vcu2m1nh29q;
 CREATE TABLE notes (
     id INT NOT NULL AUTO_INCREMENT,
     note TEXT NOT NULL,
+    complete BOOLEAN,
     PRIMARY KEY (id)
 );
 
