@@ -22,10 +22,19 @@ const project2 = {
             if (err) throw err;
         });
     },
-    deleteTodo: function(id) {
+    deleteTodo: function (id) {
         const queryString = "DELETE FROM notes WHERE id = ?;";
         connection.query(queryString, id, err => {
             if (err) throw err;
+        });
+    },
+    selectAllWorkouts: function () {
+        return new Promise(function (resolve, reject) {
+            const queryString = "SELECT * FROM workouts;";
+            connection.query(queryString, function (err, data) {
+                if (err) throw err;
+                resolve(data);
+            });
         });
     }
 }
