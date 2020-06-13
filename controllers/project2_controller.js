@@ -15,4 +15,9 @@ router.post("/api/add", (req, res) => {
     res.sendStatus(200).end();
 })
 
+router.put("/api/complete", (req, res) => {
+    sql.completeTodo(req.body.id);
+    res.sendStatus(200).end();
+})
+
 module.exports = router;

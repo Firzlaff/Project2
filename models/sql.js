@@ -15,6 +15,12 @@ const project2 = {
         connection.query(queryString, todo, err => {
             if (err) throw err;
         });
+    },
+    completeTodo: function (id) {
+        const queryString = "UPDATE notes SET complete = 1 WHERE id = ?;";
+        connection.query(queryString, id, err => {
+            if (err) throw err;
+        });
     }
 }
 

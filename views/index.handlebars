@@ -34,14 +34,12 @@
                 {{#if complete}}
                 <div>
                     <span class="flow-text" style="text-decoration: line-through">{{note}}</span>
-                    <a class="waves-effect waves-light btn-small delete-note" note-id="{{id}}"
-                        note-complete="{{complete}}">Delete</a>
+                    <a class="waves-effect waves-light btn-small delete-note" note-id="{{id}}">Delete</a>
                 </div>
                 {{else}}
                 <div>
                     <span class="flow-text">{{note}}</span>
-                    <a class="waves-effect waves-light btn-small complete-note" note-id="{{id}}"
-                        note-complete="{{complete}}">Complete</a>
+                    <a class="waves-effect waves-light btn-small completeNote" note-id="{{id}}">Complete</a>
                 </div>
                 {{/if}}
                 {{/each}}
