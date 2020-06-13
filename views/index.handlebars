@@ -30,7 +30,7 @@
                     <textarea id="addTodoInput" class="materialize-textarea"></textarea>
                     <a class="waves-effect waves-light btn-small" id="addTodo">Add</a>
                 </div>
-                {{#each sql}}
+                {{#each todo}}
                 {{#if complete}}
                 <div>
                     <span class="flow-text" style="text-decoration: line-through">{{note}}</span>
@@ -66,7 +66,11 @@
                 <br>Workouts for the Week!
                 <div class="card medium">
                     <div class="card-content">
-                        <p id="workoutList"></p>
+                        {{#each workout}}
+                        <span class="flow-text">{{day}}</span>
+                        <span class="flow-text">{{workout}}</span>
+                        <br>
+                        {{/each}}
                     </div>
             </h2>
 

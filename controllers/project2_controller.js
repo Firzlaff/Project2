@@ -4,11 +4,15 @@ const sql = require("../models/sql");
 
 // Get Route to pull data from the DB 
 router.get("/", async function (req, res) {
-    let data;
+    let todoData;
     await sql.selectAll().then(function (res) {
-        data = res;
+        todoData = res;
     });
-    res.render("index", { sql: data });
+    let allWorkouts;
+    await sql.selectAllWorkouts().then(function (res) {
+        allWorkouts = res;
+    });
+    res.render("index", { todo: todoData, workout: allWorkouts });
 });
 // Post Route
 router.post("/api/add", (req, res) => {
@@ -25,16 +29,5 @@ router.delete("/api/delete", (req, res) => {
     sql.deleteTodo(req.body.id);
     res.sendStatus(200).end();
 });
-
-//Routes for the Weekly workouts
-// router.get("/", async function (req, res) {
-//     console.log("route here");
-//     let data;
-//     await sql.selectAllWorkouts().then(function (res) {
-//         data = res;
-//     });
-//     console.log(data);
-//     res.render("index", { sql: data });
-// });
 
 module.exports = router;
