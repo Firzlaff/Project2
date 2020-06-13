@@ -21,6 +21,12 @@ const project2 = {
         connection.query(queryString, id, err => {
             if (err) throw err;
         });
+    },
+    deleteTodo: function(id) {
+        const queryString = "DELETE FROM notes WHERE id = ?;";
+        connection.query(queryString, id, err => {
+            if (err) throw err;
+        });
     }
 }
 

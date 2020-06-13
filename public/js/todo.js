@@ -24,4 +24,17 @@ $(function () {
             location.reload();
         })
     });
+
+    $(".deleteNote").on("click", function (event) {
+        event.preventDefault();
+        const id = {
+            id: $(this).attr("note-id")
+        };
+        $.ajax("/api/delete", {
+            type: "DELETE",
+            data: id
+        }).then(function () {
+            location.reload();
+        })
+    });
 });

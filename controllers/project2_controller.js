@@ -13,11 +13,16 @@ router.get("/", async function (req, res) {
 router.post("/api/add", (req, res) => {
     sql.addTodo(req.body.addTodo);
     res.sendStatus(200).end();
-})
+});
 
 router.put("/api/complete", (req, res) => {
     sql.completeTodo(req.body.id);
     res.sendStatus(200).end();
-})
+});
+
+router.delete("/api/delete", (req, res) => {
+    sql.deleteTodo(req.body.id);
+    res.sendStatus(200).end();
+});
 
 module.exports = router;
