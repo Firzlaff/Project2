@@ -1,38 +1,64 @@
-# Project2
-Notes. Aman, Senad, Terry, Tysen Breakout Room 4
+# The Feels Good!
 
-Upbeat inspirational Mental Health and physical Health App -- An app to help with mental and physical health during these crazy times. 
+### Screenshot of Screen 1
+<img src ="" alt ="Pic of Screen 1" />
+### Screenshot of Screen 2
+<img src ="" alt ="Pic of Screen 2" />
+### Screenshot of Screen 3
+<img src ="" alt ="Pic of Screen 3" />
+​
+### Application Overview
+This App is a Health and Wellness app to help give users ways to relieve stress and improve ones self physically and mentally. 
+​
+### Deployed Live Link 
+()
+​
+### Applications Background
+We wanted to create an application that would make us feel better mentally and physically, During these unprecedented times, with lack of physical contact and everyone running on high emotions we want a way to get resources and things that will help to reduce stress and increase motivation and feeling good.   
 
-User Story: I want to be able to go to an App that feels calming relaxing and zenful, there will be a beautiful background photo of wilderness/nature. There will be a center section for me to make notes or a To do list, Mental health is directly related to health. I want an app that gives me mental health and regular health tips daily. I want to see an inspirational quote to help keep me motivated. I want to have a resource section to hear directly from real doctors and people that can help. and a workout of the day. Also provide the user a recommended Book and some peaceful music while looking at it all. 
+### Applications User Story
+I want to be able to go to an App that feels calming, and peaceful. I want to have a Notes/Todo section where I can put down important things or things I need to accomplish. I want to have mental and health tips so I can help to reduce my mental stress, as well as get a workout I can do from home, travel, or pretty much anywhere I am. I want to see an inspirational quote to help keep me motivated. I want the app to have a resource section where I can research, and hear from the doctors, professionals, and experts. 
 
-features 
+### Applications Features
+Our App is fully deployed and fully functional
+Our Apps DB is hosted live on Heroku with JawsDB
+Our App gives you an inspirational/Motivational quote
+Our App gives you a section to take Notes or Todos 
+Our App gives you a 7 day workout you can follow 
+Our App gives you mental health and wellness tips
+Our App gives you a resource section with links to the Doctors and Professionals for even more ways to help.
 
-Notes/ToDo Section-- This will be where they are creating, updating and deleting, Just getting at least one thing done for yourself daily helps to keep people moving and not get bogged down by everything that needs to be done and not feeling overwhelmed. 
+### Applications Tech Used
+- HTML - base for project
+- CSS with Materialize for Framework
+- [JQuery, JavaScript](https://jquery.com/)
+- [Nodejs](https://nodejs.org/en/)
+- [MYSQL](https://www.mysql.com/)
+- [Express](https://www.npmjs.com/package/express)
+- [Express-Handlebars](https://www.npmjs.com/package/express-handlebars)
+- [JawsDB](https://devcenter.heroku.com/articles/jawsdb)
+- [DotENV](https://www.npmjs.com/package/dotenv)
+- quote API -()
+  - This API provided the random motivational quote to the user. 
+​
+### Application Contributors​
+| Contributor                                                       |     Contribution        |
+|:-----------------------------------------------------------------:| --------------------    | 
+| [Tysen](https://github.com/Firzlaff/Project2)                     |Workouts, Tips, Front End|
+| [Terry](GITHUB URL GOES HERE)   |Notes/Todo, Back End |
+| [Aman](GITHUB URL GOES HERE)    |         QuoteAPI |
+| [Senad](GITHUB URL GOES HERE)   | HTML, CSS, Materialize |
+​
+### Application Roadmap 
+We want to expand on the workout section to allow for more full robust workouts.  
+Googlebook API so we can recommend a book to the users
+Peaceful soothing music to the user
 
-Quote section-- this will pull in 1 random inspirational quote to help keep the user motivated. Found some API--- 150000+ Quotes RapidAPI has quite a few of these. with search by keyword or author. 
 
-Health and wellness tips. --- this section will most likely be created by us and stored on the server to serve up to user for their daily tips. 
 
-Google book API--- give the user a recommended book if they are interested. 
 
-workout of the day-- write up 7 days and feed each day to the user so they can have an AT HOME WORKOUT at their fingertips. 
-Also possibly an inspirational workout quote to help--- API--- Bulk Hackers Fitness Quotes API 
-This may be a new section that the user would be routed to. THey then could see the quote and workout of the day. Set each workout to the ID-- so the ID does not change. Ability to search workouts
 
-Resources -- this section will provide links to real doctors and resources for the the user like Ted Talks, Doctor a day. hearing from the doctors and experts in the field is good. 
 
-Using an API to convert and play some peaceful music to the user. -- we did locate an API for this. 
 
-Technology to be used. 
-Node
-js
-html   Will most likely utilize as much of the given starter code 
-css /Materialize 
-mysql
-sequelize
-
-using a bunch of new API's and are brainstorming the ideas of some new libs. 
-
-Look at how we store the data and data from the APIs. 
 
 
