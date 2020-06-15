@@ -5,11 +5,11 @@ require("dotenv").config();
 
 // connects to the deployed Heroku Database
 const connection = mysql.createConnection({
-   host: process.env.HOST,
-   user: process.env.USER,
-   password: process.env.PASSWORD,
-   port: process.env.PORT,
-   database: process.env.DATA_BASE
+   host: "qbct6vwi8q648mrn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+   user: "oaw9hcazqkwi0fd7",
+   password: "opcanhk0crezoflj",
+   port: 3306,
+   database: "dfbs7vcu2m1nh29q"
 });
 
 module.exports = connection;
