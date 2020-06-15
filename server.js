@@ -9,20 +9,21 @@ const router = require("./controllers/project2_controller");
 // create variable to use handlebars
 const exphbs = require("express-handlebars");
 
-//
+//bodyparse middleware
 app.use(express.urlencoded({ extended: true }));
-//
 app.use(express.json());
-//
-app.use(express.static('public'));
 
-//
+//sreving static files publicly
+app.use(express.static("public"));
+
+//express template engine: express-handlebars
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-//
 app.set("view engine", "handlebars");
-//
+
+//middleware for routing system
 app.use(router);
-//
-app.listen(PORT, function () {
-    console.log("App listening on PORT " + PORT);
+
+//listen for connection on the given path
+app.listen(PORT, () => {
+  console.log("App listening on PORT " + PORT);
 });
