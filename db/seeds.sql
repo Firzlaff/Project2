@@ -5,13 +5,13 @@ INSERT INTO notes (note, complete) VALUES
 
 --  Workout Seeds Added to the Heroku DB
 INSERT INTO workouts (day, workout)
-VALUES ("Monday", "15 pushups---At 5 different times throughout the day(75 total)"), 
-    ("Tuesday", "20 Squats--- At 5 different times throughout the day(100 total)"),
-    ("Wednesday", "20 Situps--- At 5 different times throughout the day(100 total)"),
-    ("Thursday", "15 pushups---At 5 different times throughout the day(75 total)"),
-    ("Friday", "20 Squats--- At 5 different times throughout the day(100 total)"),
-    ("Saturday", "20 Situps--- At 5 different times throughout the day(100 total)"),
-    ("Sunday", "10 pushups, 20 Squats, 20 situps --- At 5 different times throughout the day");
+VALUES ("1", "-----215 pushups---At 5 different times throughout the day(75 total)"), 
+    ("2", "-----20 Squats--- At 5 different times throughout the day(100 total)"),
+    ("3", "-----220 Situps--- At 5 different times throughout the day(100 total)"),
+    ("4", "-----215 pushups---At 5 different times throughout the day(75 total)"),
+    ("5", "-----220 Squats--- At 5 different times throughout the day(100 total)"),
+    ("6", "-----220 Situps--- At 5 different times throughout the day(100 total)"),
+    ("7", "-----20 pushups, 20 Squats, 20 situps --- At 5 different times throughout the day");
 
 
 --     Health and Wellness tips, seeds added to the Heroku DB
