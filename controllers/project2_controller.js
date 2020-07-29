@@ -1,22 +1,30 @@
 const express = require("express");
 const router = express.Router();
-const sql = require("../models/sql");
+const sql = require("../db/sql");
+var db = require("../models");
+const { sequelize } = require("../models");
+
 
 // Get Route to pull data from the DB 
-router.get("/", async function (req, res) {
+router.get("/", function (req, res) {
     let todoData;
-    await sql.selectAll().then(function (res) {
-        todoData = res;
+    console.log("get")
+    db.Note.findAll({raw: true}).then(function (notes) {
+        todoData = notes;
+        let allWorkouts;
+        db.Workout.findAll({raw: true}).then(function (workouts) {
+            allWorkouts = workouts;
+            let oneTip;
+            db.Tip.findOne({raw: true, order: sequelize.random()}).then(function (tip) {
+                oneTip = [tip];
+                console.log(tip)
+                res.render("index", { todo: todoData, workout: allWorkouts, tip: oneTip });
+            });
+        });
     });
-    let allWorkouts;
-    await sql.selectAllWorkouts().then(function (res) {
-        allWorkouts = res;
-    });
-    let oneTip;
-    await sql.selectOneTip().then(function (res) {
-        oneTip = res;
-    });
-    res.render("index", { todo: todoData, workout: allWorkouts, tip: oneTip });
+
+
+
 });
 // Post Route
 router.post("/api/add", (req, res) => {

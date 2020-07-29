@@ -3,12 +3,12 @@ $(function() {
   $("#addTodo").on("click", (event) => {
     event.preventDefault();
     const addTodo = {
-      addTodo: $("#addTodoInput").val(),
+    addTodo: $("#addTodoInput").val(),
     };
     $.ajax("/api/add", {
       type: "POST",
       data: addTodo,
-    }).then(() => {
+      }).then(() => {
       location.reload();
     });
   });
@@ -30,7 +30,7 @@ $(function() {
     event.preventDefault();
     const id = {
       id: $(this).attr("note-id"),
-    };
+   };
     $.ajax("/api/delete", {
       type: "DELETE",
       data: id,

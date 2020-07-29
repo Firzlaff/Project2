@@ -4,6 +4,9 @@ const express = require("express");
 const app = express();
 //creating variable for the port to connect to the server
 const PORT = process.env.PORT || 3000;
+
+// Requiring our models for syncing
+const db = require("./models");
 // creating variable for a router for the controller, this also must be required in
 const router = require("./controllers/project2_controller");
 // create variable to use handlebars
@@ -23,7 +26,9 @@ app.set("view engine", "handlebars");
 //middleware for routing system
 app.use(router);
 
-//listen for connection on the given path
-app.listen(PORT, () => {
-  console.log("App listening on PORT " + PORT);
+
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function() {
+    console.log("App listening on PORT " + PORT);
+  });
 });
