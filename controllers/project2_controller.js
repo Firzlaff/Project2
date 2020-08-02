@@ -1,14 +1,13 @@
 const express = require("express");
 const router = express.Router();
-const sql = require("../db/sql");
 var db = require("../models");
+//Using sequliize
 const { sequelize } = require("../models");
 
 
 // Get Route to pull data from the DB 
 router.get("/", function (req, res) {
     let todoData;
-    console.log("get")
     db.Note.findAll({raw: true}).then(function (notes) {
         todoData = notes;
         let allWorkouts;
@@ -17,7 +16,6 @@ router.get("/", function (req, res) {
             let oneTip;
             db.Tip.findOne({raw: true, order: sequelize.random()}).then(function (tip) {
                 oneTip = [tip];
-                console.log(tip)
                 res.render("index", { todo: todoData, workout: allWorkouts, tip: oneTip });
             });
         });
@@ -27,19 +25,39 @@ router.get("/", function (req, res) {
 
 });
 // Post Route
+// activity 12
 router.post("/api/add", (req, res) => {
-    sql.addTodo(req.body.addTodo);
-    res.sendStatus(200).end();
+    console.log(req.body);
+    db.Note.create({
+      note: req.body.addTodo,
+      complete: 0
+    })
+      .then(function(dbNote) {
+        res.json(dbNote);
+      });
 });
 // Update Route
 router.put("/api/complete", (req, res) => {
-    sql.completeTodo(req.body.id);
-    res.sendStatus(200).end();
+    db.Note.update({complete: 1},
+        {
+          where: {
+            id: req.body.id
+          }
+        })
+        .then(function(dbNote) {
+          res.json(dbNote);
+        });
 });
 // Delete Route
 router.delete("/api/delete", (req, res) => {
-    sql.deleteTodo(req.body.id);
-    res.sendStatus(200).end();
+    db.Note.destroy({
+        where: {
+          id: req.body.id
+        }
+      })
+        .then(function(dbNote) {
+          res.json(dbNote);
+        });
 });
 
 module.exports = router;
