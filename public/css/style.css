@@ -12,5 +12,12 @@ body {
 .card {
    opacity: 0.8;
 }
-
+#quotes-header {
+width: 49%;
+margin-right: 6px;
+}
+#notes-header{
+width: 49%;
+margin-left: 6px;
+}
 /* .col {opacity:0} */

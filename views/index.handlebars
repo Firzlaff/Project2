@@ -17,8 +17,9 @@
         <h1 class="col s12 m12 center-align z-depth-5">The Feel Goods</h1>
 
         <!--Card for Inspirational Quote-->
-        <h2 class="col s12 m6 center-align card medium z-depth-5">
-            Quote
+        <div id="quotes-header" class="col s12 m6 center-align card medium z-depth-5">
+            <h2>Quote</h2>
+
             <span style="z-index:50;font-size:0.2em; font-weight: bold;">
                 <img src="https://theysaidso.com/branding/theysaidso.png" height="10" width="10" alt="theysaidso.com" />
                 <a href="https://theysaidso.com" title="Powered by quotes from theysaidso.com"
@@ -34,13 +35,14 @@
                 </div>
                 <div class="light-text"
                     style="text-decoration: none; color:#ccc; z-index: 999; text-align: right; padding-right: 20px; margin-top: 5px;">
-                    <a style="text-decoration: none; color:#ccc;" title="Inspiring Quote of the day" </div>
-
-        </h2>
+                    <a style="text-decoration: none; color:#ccc;" title="Inspiring Quote of the day"></a>
+                </div>
+            </div>
+        </div>
 
         <!--Card for Notes/Todo section-->
-        <h2 id="notes-header" class="col s12 m6 center-align card medium z-depth-5">
-            Notes/Todo:
+        <div id="notes-header" class="col s12 m6 center-align card medium z-depth-5">
+            <h2>Notes/Todo:</h2>
             <div id="notes">
                 <div class="row" style="margin-top: 10px;">
                     <div class="col s12 m10">
@@ -64,47 +66,49 @@
                 {{/if}}
                 {{/each}}
             </div>
-        </h2>
+        </div>
 
         <!--Card for Health and Wellness Tips-->
-        <h2 id="tip-header" class="col s12 m12 center-align card medium z-depth-5">
-            Health and Wellness Tips:
+        <div id="tip-header" class="col s12 m12 center-align card medium z-depth-5">
+            <h2>Health and Wellness Tips:</h2>
             <br>
             {{#each tip}}
             <span class="flow-text"><b>{{name}}</b></span>
             <br>
             <span class="flow-text">{{tip}}</span>
             {{/each}}
-        </h2>
+        </div>
 
-        <!-- Card for Workout of the day Weekly List--> -->
-        <div id="workouts-header" class="col s12 m12 center-align z-depth-5">
+        <!-- Card for Workout of the day Weekly List-->
+        <div id="workouts-header" class="col s12 m12 center-align card large z-depth-5">
+
+
             <h2>Workouts for the Week!</h2>
-            <div class="card medium">
-                <div class="card-content left-align">
-                    {{#each workout}}
-                    <span class="flow-text"><b>{{day}}</b></span>
-                    <span class="flow-text">{{workout}}</span>
-                    <br>
-                    {{/each}}
-                </div>
+            <div class="card-content left-align">
+                {{#each workout}}
+                <span class="flow-text"><b>{{day}}</b></span>
+                <span class="flow-text">{{workout}}</span>
+                <br>
+                {{/each}}
             </div>
+
         </div>
 
         <!--Card for Resources-->
-        <h2 id="resources-header" class="col s12 m6 center-align card medium z-depth-5">
-            ReSoUrCeS:
+        <div id="resources-header" class="col s12 m6 center-align card medium z-depth-5">
+            <h2>Resources:</h2>
             <div class="col-sm-">
                 <h5><a href=“https://www.adoctoraday.com/”><em class=“white-text”>Doctor a Day</em></a></h5>
                 <h5><a href=“https://mindfulnesscenter.utah.edu/”><em class=“white-text”>Free anxiety and depression
                             workshop</em></a></h5>
-                <h5><a href=“https://namiut.org/”><em class=“white-text”>National Alliance on Mental Illness</em></a>
+                <h5><a href=“https://namiut.org/”><em class=“white-text”>National Alliance on Mental
+                            Illness</em></a>
                 </h5>
                 <h5><a href=“https://www.barnesandnoble.com/w/everyday-courage-emma-hill/1126072654”><em
                             class=“white-text”>Everyday Courage</em></a></h5>
                 <h5><a href=“https://www.allencarr.com/usa/easyway-quit-smoking/”><em class=“white-text”>Easy Way to
                             Stop Smoking</em></a></h5>
             </div>
-        </h2>
+        </div>
     </div>
 </div>
